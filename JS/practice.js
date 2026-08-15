@@ -1,4 +1,4 @@
-import companies from "../Data/companyLoader.js";
+import companies from "../DATA/companyLoader.js";
 
 const questionEl = document.getElementById("question");
 const feedback = document.getElementById("feedback");
