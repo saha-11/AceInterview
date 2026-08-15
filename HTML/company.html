@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Questions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/company.css">
+</head>
+
+<body>
+  <div class="background-glow"></div>
+  <div class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Company preparation</p>
+        <h1 id="companyTitle">Loading...</h1>
+        <p class="page-copy">Generate beautifully formatted interview material for your target company and review it inside premium cards.</p>
+      </div>
+      <div class="cta-group">
+        <button id="backBtn" class="secondary">← Dashboard</button>
+        <button id="generate" type="button" class="primary">Generate Practice Session</button>
+      </div>
+    </header>
+
+    <section class="company-meta glass-card">
+      <div class="meta-chip"><span class="chip-label">Difficulty</span><strong>Focused</strong></div>
+      <div class="meta-chip"><span class="chip-label">Type</span><strong>Technical + HR</strong></div>
+      <div class="meta-actions">
+        <button id="printBtn" type="button" class="secondary">Print</button>
+        <button id="saveBtn" type="button" class="secondary">Save</button>
+        <button id="pdfBtn" type="button" class="secondary">Export PDF</button>
+      </div>
+    </section>
+
+    <section class="company-output glass-card">
+      <div class="output-header">
+        <p>Today's Practice Session</p>
+        <div class="loader-shell"><div id="loader" class="loader hidden"></div></div>
+      </div>
+      <div class="stats-panel">
+
+    <div class="stat-card">
+        <h3 id="technicalCount">0</h3>
+        <p>Technical</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="hrCount">0</h3>
+        <p>HR</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="codingCount">0</h3>
+        <p>Coding</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="tipsCount">0</h3>
+        <p>Tips</p>
+    </div>
+
+</div>
+
+<p id="generatedTime" class="generated-time">
+    No practice session generated yet.
+</p>
+<div id="output" class="output-area"></div>
+
+      <div class="output-actions">
+        <button id="practiceBtn" type="button" class="primary" disabled>Start Practice</button>
+      </div>
+    </section>
+
+    <section class="question-guide">
+      <div class="section-heading">
+        <p class="eyebrow">What you'll receive</p>
+        <h2>Structured interview guidance.</h2>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-card glass-card">
+          <p class="guide-label">Technical Questions</p>
+          <p>Deep, company-specific questions that mirror real interviews.</p>
+        </article>
+        <article class="guide-card glass-card">
+          <p class="guide-label">HR Questions</p>
+          <p>Behavioral prompts designed to build confident narratives.</p>
+        </article>
+        <article class="guide-card glass-card">
+          <p class="guide-label">Coding Questions</p>
+          <p>Code-focused problems that align with the company's interview style.</p>
+        </article>
+        <article class="guide-card glass-card">
+          <p class="guide-label">Interview Tips</p>
+          <p>Practical advice for interview pacing and delivery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-panel">
+      <div class="faq-item glass-card">
+        <details>
+          <summary>How will the AI format the output?</summary>
+          <p>The response is crafted with clear sections for each question type, difficulty cues, and interview tips.</p>
+        </details>
+      </div>
+      <div class="faq-item glass-card">
+        <details>
+          <summary>Can I generate multiple company briefs?</summary>
+          <p>Yes. Repeat the generation flow for each target company and compare your readiness across interviews.</p>
+        </details>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="../JS/company.js"></script>
+  <script src="../JS/glow.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+lucide.createIcons();
+</script>
+
+</body>
+
+</html>
