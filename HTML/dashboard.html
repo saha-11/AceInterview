@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AceInterview Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+</head>
+
+<body>
+  <div class="glow-orb"></div>
+
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">A</span>
+        <div>
+          <p class="brand-label">AceInterview</p>
+          <p class="brand-note">Premium prep for career defining interviews</p>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar-frame">
+          <img id="profilePic" alt="Profile photo">
+        </div>
+        <div>
+          <p class="profile-name" id="username">Loading...</p>
+          <p class="profile-status">Future Software Engineer</p>
+        </div>
+        <span class="status-pill">Online</span>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item active" data-target="dashboard"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></li>
+        <li class="nav-item" data-target="companies"><i data-lucide="building-2"></i><span>Companies</span></li>
+        <li class="nav-item" data-target="coding"><i data-lucide="code-2"></i><span>Coding</span></li>
+        <li class="nav-item" data-target="hr-round"><i data-lucide="user-check"></i><span>HR Round</span></li>
+        <li class="nav-item" data-target="progress"><i data-lucide="trending-up"></i><span>Progress</span></li>
+        <li class="nav-item" data-target="logout"><i data-lucide="log-out"></i><span>Logout</span></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div class="topbar-text">
+          <p class="eyebrow">Elevated preparation for thoughtful engineers</p>
+          <h1 id="dashboardGreeting">Hello, there</h1>
+          <p class="topbar-copy">Your focus areas, progress, and upcoming interviews are presented in a calm, premium workspace.</p>
+        </div>
+        <div class="action-pill">7 Day Streak</div>
+      </header>
+
+      <section class="search-panel glass-card">
+        <div class="search-field">
+          <i data-lucide="search"></i>
+          <label for="company" class="sr-only">Search company</label>
+          <input id="company" placeholder="Search Google, Microsoft, Amazon..." autocomplete="off">
+        </div>
+        <button id="searchBtn" class="generate-btn">Generate Questions</button>
+      </section>
+
+      <section class="dashboard-grid">
+        <section class="glass-card progress-panel">
+          <div class="section-title">
+            <h2>Interview Readiness</h2>
+            <span class="small-pill">On Track</span>
+          </div>
+          <div class="progress-header">
+            <span><i data-lucide="target"></i>Weekly focus</span>
+            <span class="status-badge">92%</span>
+          </div>
+          <div class="ring-frame">
+            <svg viewBox="0 0 220 220" class="progress-ring" aria-hidden="true">
+              <circle class="ring-track" cx="110" cy="110" r="96"></circle>
+              <circle class="ring-progress" cx="110" cy="110" r="96"></circle>
+            </svg>
+            <div class="ring-ticks">
+              <span style="--i:0"></span>
+              <span style="--i:1"></span>
+              <span style="--i:2"></span>
+              <span style="--i:3"></span>
+              <span style="--i:4"></span>
+              <span style="--i:5"></span>
+              <span style="--i:6"></span>
+              <span style="--i:7"></span>
+              <span style="--i:8"></span>
+              <span style="--i:9"></span>
+              <span style="--i:10"></span>
+              <span style="--i:11"></span>
+            </div>
+            <div class="ring-center">
+              <div class="value">92%</div>
+              <div class="label">Interview Ready</div>
+            </div>
+          </div>
+          <div class="progress-copy">
+            <div class="status">Excellent Progress</div>
+            <div class="note">Keep going to maintain momentum for your next interview.</div>
+          </div>
+        </section>
+
+        <section class="glass-card calendar-panel">
+          <div class="section-title">
+            <h2>Interview Calendar</h2>
+            <p>Upcoming sessions in a monthly view</p>
+          </div>
+          <div class="calendar-meta">
+            <p data-current-month></p>
+            <span class="small-pill">4 events</span>
+          </div>
+          <div class="calendar-grid">
+            <div class="day-label">Mon</div>
+            <div class="day-label">Tue</div>
+            <div class="day-label">Wed</div>
+            <div class="day-label">Thu</div>
+            <div class="day-label">Fri</div>
+            <div class="day-label">Sat</div>
+            <div class="day-label">Sun</div>
+            <div class="calendar-days"></div>
+          </div>
+          <div class="calendar-footer">
+            <div class="calendar-legend"><span class="dot"></span><span>Upcoming Interview</span></div>
+          </div>
+        </section>
+
+        <section class="glass-card analytics-panel">
+          <div class="section-title">
+            <h2>Analytics</h2>
+            <p>Performance metrics with gentle motion</p>
+          </div>
+          <div class="analytics-grid">
+            <article class="metric-card">
+              <div class="metric-head">
+                <p>Weekly Questions Solved</p>
+                <span>+14%</span>
+              </div>
+              <div class="metric-value">48</div>
+              <div class="metric-chart mini-line">
+                <svg viewBox="0 0 120 48" aria-hidden="true">
+                  <path d="M6 34 L28 28 L50 18 L72 24 L94 14 L114 10" fill="none" stroke="#7B5E57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"></path>
+                </svg>
+              </div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-head">
+                <p>Companies Practiced</p>
+                <span>14</span>
+              </div>
+              <div class="metric-value">14</div>
+              <div class="metric-chart mini-bars">
+                <svg viewBox="0 0 120 48" aria-hidden="true">
+                  <rect x="12" y="20" width="10" height="24" rx="4" fill="#C9A86A"></rect>
+                  <rect x="36" y="14" width="10" height="30" rx="4" fill="#B8958A"></rect>
+                  <rect x="60" y="26" width="10" height="18" rx="4" fill="#8FAE9B"></rect>
+                  <rect x="84" y="10" width="10" height="34" rx="4" fill="#7B5E57"></rect>
+                  <rect x="108" y="18" width="10" height="26" rx="4" fill="#C9A86A"></rect>
+                </svg>
+              </div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-head">
+                <p>HR Accuracy</p>
+                <span>92%</span>
+              </div>
+              <div class="metric-value">92%</div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:92%"></div>
+              </div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-head">
+                <p>Coding Accuracy</p>
+                <span>88%</span>
+              </div>
+              <div class="metric-value">88%</div>
+              <div class="progress-bar progress-soft">
+                <div class="progress-fill" style="width:88%"></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="glass-card badges-panel">
+          <div class="section-title">
+            <h2>Achievement Badges</h2>
+            <p>Premium marks for consistency and mastery</p>
+          </div>
+          <div class="badge-grid">
+            <article class="badge-card">
+              <div class="badge-icon"><i data-lucide="award"></i></div>
+              <div class="badge-label">
+                <p class="badge-title">100 Questions</p>
+                <p class="badge-sub">Milestone unlocked</p>
+              </div>
+            </article>
+            <article class="badge-card">
+              <div class="badge-icon"><i data-lucide="sparkles"></i></div>
+              <div class="badge-label">
+                <p class="badge-title">7 Day Streak</p>
+                <p class="badge-sub">Daily practice streak</p>
+              </div>
+            </article>
+            <article class="badge-card">
+              <div class="badge-icon"><i data-lucide="building-2"></i></div>
+              <div class="badge-label">
+                <p class="badge-title">Google Ready</p>
+                <p class="badge-sub">Target company focus</p>
+              </div>
+            </article>
+            <article class="badge-card">
+              <div class="badge-icon"><i data-lucide="brain"></i></div>
+              <div class="badge-label">
+                <p class="badge-title">HR Expert</p>
+                <p class="badge-sub">Conversation readiness</p>
+              </div>
+            </article>
+          </div>
+        </section>
+</section>
+
+<section class="glass-card interview-results">
+
+    <div class="section-title">
+        <section class="glass-card" id="contentArea">
+
+    <div class="section-title">
+        <div>
+            <h2>Interview Questions</h2>
+            <p id="sectionDescription">
+                Search for a company above and click
+                <strong>Generate Questions</strong>
+                to begin your interview practice.
+            </p>
+        </div>
+    </div>
+
+    <div id="dashboardContent">
+
+        Search for a company above and click
+        <strong>Generate Questions</strong>
+        to begin your interview practice.
+
+    </div>
+
+</section>
+    </div>
+
+    <div id="questionContainer">
+
+        <div class="placeholder">
+            Search for a company above and click
+            <strong>Generate Questions</strong>
+            to begin your interview practice.
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+  <script src="../JS/dashboard.js"></script>
+  <script src="../JS/glow.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.replace({ 'stroke-width': 2, 'width': 22, 'height': 22, 'color': '#756F69' });
+
+      const today = new Date();
+      const monthLabel = document.querySelector('[data-current-month]');
+      if (monthLabel) {
+        monthLabel.textContent = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(today);
+      }
+
+      const calendarContainer = document.querySelector('.calendar-days');
+      if (calendarContainer) {
+        const year = today.getFullYear();
+        const month = today.getMonth();
+        const firstDay = new Date(year, month, 1).getDay();
+        const startOffset = firstDay === 0 ? 6 : firstDay - 1;
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const upcoming = [today.getDate() + 2, today.getDate() + 5, today.getDate() + 9, today.getDate() + 12].filter(n => n <= daysInMonth);
+
+        for (let i = 0; i < startOffset; i += 1) {
+          const empty = document.createElement('div');
+          empty.className = 'calendar-day disabled';
+          calendarContainer.appendChild(empty);
+        }
+
+        for (let day = 1; day <= daysInMonth; day += 1) {
+          const button = document.createElement('button');
+          button.className = 'calendar-day';
+          button.type = 'button';
+          button.dataset.date = day;
+          button.textContent = day;
+          if (day === today.getDate()) {
+            button.classList.add('calendar-day--today');
+          }
+          if (upcoming.includes(day)) {
+            button.classList.add('calendar-day--event');
+          }
+          calendarContainer.appendChild(button);
+        }
+
+        while (calendarContainer.childElementCount < 42) {
+          const extra = document.createElement('div');
+          extra.className = 'calendar-day disabled';
+          calendarContainer.appendChild(extra);
+        }
+      }
+
+      const glow = document.querySelector('.glow-orb');
+      if (glow) {
+        let mouseX = 0;
+        let mouseY = 0;
+        let posX = 0;
+        let posY = 0;
+        const speed = 0.08;
+
+        const animateGlow = () => {
+          posX += (mouseX - posX) * speed;
+          posY += (mouseY - posY) * speed;
+          glow.style.transform = `translate(calc(-50% + ${posX}px), calc(-50% + ${posY}px))`;
+          requestAnimationFrame(animateGlow);
+        };
+
+        window.addEventListener('mousemove', event => {
+          const centerX = window.innerWidth / 2;
+          const centerY = window.innerHeight / 2;
+          mouseX = (event.clientX - centerX) / 22;
+          mouseY = (event.clientY - centerY) / 28;
+        });
+
+        animateGlow();
+      }
+    });
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+lucide.createIcons();
+</script>
+
+</body>
+
+</html>
